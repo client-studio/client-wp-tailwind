@@ -26,6 +26,12 @@
 
     <?php endif; ?>
 
+     <?php if( get_row_layout() == 'carousel' ): ?>
+
+        <?php get_template_part( 'template-parts/module', 'carousel' ); ?>
+
+    <?php endif; ?>
+
 
 
 <?php endwhile; endif; ?>
