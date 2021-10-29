@@ -1,0 +1,99 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+html {
+    scroll-behavior: smooth !important;
+}
+::selection {
+  @apply bg-primary text-white
+}
+::-moz-selection {
+  @apply bg-primary text-white
+}
+
+.debug { background: #ff0000;}
+
+.entry-content, article {
+    h1 {
+        @apply text-3xl lg:text-5xl font-bold mb-4;
+    }
+
+    h2 {
+        @apply text-2xl lg:text-3xl font-bold mb-3;
+    }
+
+    h3 {
+        @apply text-xl lg:text-2xl font-bold mb-3;
+    }
+
+    p, ul, ol {
+        a {
+            @apply text-blue-500 underline;
+
+            &:hover {
+                @apply no-underline;
+            }
+        }
+
+        @apply mb-8;
+    }
+
+    ul {
+        li {
+            @apply list-disc list-inside;
+        }
+    }
+
+    ol {
+        li {
+            @apply list-decimal list-inside;
+        }
+    }
+}
+
+.lead p { @apply text-lg font-medium }
+
+.has-easy-notification-bar .easy-notification-bar { @apply bg-gradient-to-r from-green-300 via-green-500 to-purple-600}
+.has-easy-notification-bar .easy-notification-bar-button a { @apply bg-transparent }
+.has-easy-notification-bar .easy-notification-bar-button a:hover { @apply bg-transparent underline }
+
+#cookie-law-info-bar {
+  background: rgba(255, 255, 255, 0.35) !important;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: none;
+  margin-top: 1px;
+  overflow: hidden;
+}
+.cli-style-v2 { @apply py-5 }
+.cli-style-v2 a.cli_action_button { @apply font-bold rounded-lg }
+.cli-style-v2 a.cli_settings_button { @apply no-underline }
+
+.wpcf7-text { @apply block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300  bg-gray-50 hover:bg-white focus:bg-white rounded-md p-3 mt-2 text-gray-900 }
+.wpcf7-textarea { @apply block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300  bg-gray-50 hover:bg-white focus:bg-white rounded-md p-3 mt-2 text-gray-900 }
+.wpcf7-select { @apply block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300 bg-gray-50 hover:bg-white focus:bg-white rounded-md p-3 mt-2 text-gray-900  }
+.wpcf7-label { @apply block text-sm font-medium text-left text-gray-300 }
+.wpcf7-submit { @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 }
+
+.wpcf7-response-output { }
+
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+/* change dot color
+.flickity-page-dots { bottom: -15px;}
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: .5;
+  background: white;
+}
+.flickity-page-dots .dot.is-selected {
+  background: white;
+  opacity: 1;
+}
+*/
