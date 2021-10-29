@@ -57,6 +57,10 @@ html {
 .has-easy-notification-bar .easy-notification-bar-button a { @apply bg-transparent }
 .has-easy-notification-bar .easy-notification-bar-button a:hover { @apply bg-transparent underline }
 
+.btn { @apply px-4 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-black bg-white hover:bg-white sm:px-8 transition-colors duration-500 }
+
+.btn-outline { @apply bg-transparent border border-gray-300 text-white hover:text-dark }
+
 #cookie-law-info-bar {
   background: rgba(255, 255, 255, 0.35) !important;
   -webkit-backdrop-filter: blur(20px);
