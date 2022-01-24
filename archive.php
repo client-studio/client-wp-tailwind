@@ -1,26 +1,13 @@
 <?php get_header(); ?>
 
-<div class="container mx-auto my-8">
+<div class="site-container my-12">
 
-
-			<div class="pt-10 pb-20">
-
-				<div class="max-w-7xl mx-auto mb-16 mt-10 text-center">
-					<article>
-					<h1 class="text-center">
-					<?php the_archive_title(); ?>
-					</h1>
-
-					<h5 class="text-center">
-					<?php the_archive_description(); ?>
-					</h5>
-
+					<article class="text-center">
+					<h1><?php the_archive_title(); ?></h1>
+					<h5><?php the_archive_description(); ?></h5>
 					</article>
-				</div>
 
-					<div class="max-w-7xl mx-auto">
-
-						<div class="news-archive grid grid-cols-1 md:grid-cols-2 md:gap-x-10 pb-12">
+					<div class="news-archive grid grid-cols-1 md:grid-cols-2 md:gap-x-10 pb-12">
 
 							<?php if ( have_posts() ) : ?>
 								<?php
@@ -52,11 +39,6 @@
 						<?php endwhile; endif;	?>
 
 					</div>
-
-					</div>
-
-			</div>
-
 
 </div>
 

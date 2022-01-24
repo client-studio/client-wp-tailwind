@@ -1,16 +1,11 @@
 
 </main>
 
-<?php do_action( 'tailpress_content_end' ); ?>
-
 </div>
-
-<?php do_action( 'tailpress_content_after' ); ?>
-
 
 <footer class="bg-black" aria-labelledby="footer">
 
-	<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+	<div class="site-container pt-12 pb-10">
 
     <div class="grid grid-cols-2 md:grid-cols-5 xl:gap-8">
 
@@ -42,7 +37,7 @@
 
       </div>
 
-    <div class="mt-12 border-t border-gray-200 pt-8 pb-10">
+    <div class="mt-12 pt-8 border-t border-gray-200">
 			<div class="sm:flex sm:justify-between space-x-8 px-3">
 
 				<div>

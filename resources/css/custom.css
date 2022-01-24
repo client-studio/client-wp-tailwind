@@ -13,6 +13,8 @@ html {
 
 .debug { background: #ff0000;}
 
+.site-container { @apply max-w-screen-2xl px-8 sm:px-12 lg:px-24 xl:px-32 mx-auto }
+
 .entry-content, article {
     h1 {
         @apply text-3xl lg:text-5xl font-bold mb-4;
@@ -35,7 +37,7 @@ html {
             }
         }
 
-        @apply mb-8;
+        @apply mb-4;
     }
 
     ul {
@@ -53,7 +55,8 @@ html {
 
 .lead p { @apply text-lg font-medium }
 
-.has-easy-notification-bar .easy-notification-bar { @apply bg-gradient-to-r from-green-300 via-green-500 to-purple-600}
+.has-easy-notification-bar .easy-notification-bar { @apply bg-gradient-to-r from-green-400 via-green-500 to-purple-600 flex }
+.has-easy-notification-bar .easy-notification-bar-message { }
 .has-easy-notification-bar .easy-notification-bar-button a { @apply bg-transparent }
 .has-easy-notification-bar .easy-notification-bar-button a:hover { @apply bg-transparent underline }
 
@@ -62,16 +65,19 @@ html {
 .btn-outline { @apply bg-transparent border border-gray-300 text-white hover:text-dark }
 
 #cookie-law-info-bar {
-  background: rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   box-shadow: none;
-  margin-top: 1px;
-  overflow: hidden;
 }
-.cli-style-v2 { @apply py-5 }
+
+.cli-style-v2 { @apply py-4 }
 .cli-style-v2 a.cli_action_button { @apply font-bold rounded-lg }
-.cli-style-v2 a.cli_settings_button { @apply no-underline }
+.cli-style-v2 a.cli_settings_button { @apply  font-bold rounded-lg }
+
+.cli_manage_current_consent {@apply underline}
+
+.grecaptcha-badge { visibility: hidden; }
 
 .wpcf7-text { @apply block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300  bg-gray-50 hover:bg-white focus:bg-white rounded-md p-3 mt-2 text-gray-900 }
 .wpcf7-textarea { @apply block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm border border-gray-300  bg-gray-50 hover:bg-white focus:bg-white rounded-md p-3 mt-2 text-gray-900 }
@@ -87,6 +93,8 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .alignright { float: right; }
 .alignleft { float: left; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+.attachment svg,.widget_media_image svg{max-width:100%;height:auto}
 
 /* change dot color
 .flickity-page-dots { bottom: -15px;}

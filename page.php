@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Home
+Template Name: Page
 */
 get_header(); ?>
 
@@ -23,7 +23,7 @@ get_header(); ?>
 						 <div class="absolute inset-0 opacity-50 bg-gradient-to-b from-black to-dark mix-blend-multiply"></div>
 					 </div>
 					 <?php } ?>
-					 <div class="relative px-4 sm:px-6 py-32 lg:py-48 lg:px-8 max-w-4xl mx-auto">
+					 <div class="relative px-4 sm:px-6 py-32 lg:py-36 lg:px-8 max-w-4xl mx-auto">
 
 						 <article class="lead text-white text-center">
 						 	<?php the_content(); ?>

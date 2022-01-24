@@ -1,6 +1,4 @@
-<div class="py-6">
-
-	<div class="container mx-auto max-w-5xl">
+<div class="site-container py-6 module-feature">
 
 					<?php $j = 1; ?>
 
@@ -40,7 +38,5 @@
 						 </div>
 						 <?php $j++ ?>
 						<?php endwhile; endif; ?>
-
-	</div>
 
 </div>

@@ -32,7 +32,7 @@
 								 </article>
 
 								 <div class="text-base mt-3 text-gray-100 text-center font-medium">
-				 				<time datetime="<?php the_time('d.m.Y'); ?>">
+				 				<time datetime="<?php the_time('F jS, Y'); ?>">
 				 					<?php the_time('F jS, Y'); ?>
 				 				</time>
 				 				</div>
@@ -45,7 +45,7 @@
 					 </div>
 				 </div>
 
-			<div class="max-w-4xl mx-auto pt-12 pb-8 px-5">
+			<div class="site-container py-12">
 			<article id="post-<?php the_ID(); ?>" <?php post_class('lead'); ?>>
 
 				<div class="entry-content">

@@ -17,6 +17,9 @@ module.exports = {
             './archive.php',
             './index.php',
             './front-page.php',
+            './page.php',
+            './page-hero.php',
+            './page-plain.php',
             './404.php',
             './safelist.txt'
         ],
