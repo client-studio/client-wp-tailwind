@@ -20,7 +20,7 @@
     <?php endif; ?>
 
 
-    <?php if( get_row_layout() == 'features' ): ?>
+    <?php if( get_row_layout() == 'feature' ): ?>
 
         <?php get_template_part( 'template-parts/module', 'feature' ); ?>
 
@@ -31,6 +31,18 @@
         <?php get_template_part( 'template-parts/module', 'carousel' ); ?>
 
     <?php endif; ?>
+
+    <?php if( get_row_layout() == 'faq' ): ?>
+
+       <?php get_template_part( 'template-parts/module', 'faq' ); ?>
+
+   <?php endif; ?>
+
+   <?php if( get_row_layout() == 'space' ): ?>
+
+      <?php get_template_part( 'template-parts/module', 'space' ); ?>
+
+  <?php endif; ?>
 
 
 

@@ -1,3 +1,5 @@
+/* client theme v1.2 (1322) */
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -11,21 +13,68 @@ html {
   @apply bg-primary text-white
 }
 
+::selection {
+  @apply bg-primary text-white
+}
+::-moz-selection {
+  @apply bg-primary text-white
+}
+
+.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.pace-inactive {
+	display: none;
+}
+
+.pace .pace-progress {
+	background: #fff;
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	right: 100%;
+	width: 100%;
+	height: 3px;
+}
+
+/* lazy load smoothen */
+img[data-lazy-src] {
+   opacity: 0;
+}
+img.lazyloaded {
+   -webkit-transition: opacity .5s linear 0.2s;
+       -moz-transition: opacity .5s linear 0.2s;
+                 transition: opacity .5s linear 0.2s;
+   opacity: 1;
+}
+
+body.admin-bar .main-header { @apply top-12 lg:top-8 }
+
 .debug { background: #ff0000;}
 
 .site-container { @apply max-w-screen-2xl px-8 sm:px-12 lg:px-24 xl:px-32 mx-auto }
 
 .entry-content, article {
-    h1 {
+    h1, h1 p {
         @apply text-3xl lg:text-5xl font-bold mb-4;
     }
 
-    h2 {
+    h2, h2 p {
         @apply text-2xl lg:text-3xl font-bold mb-3;
     }
 
-    h3 {
+    h3, h3 p {
         @apply text-xl lg:text-2xl font-bold mb-3;
+    }
+
+    h4, h4 p {
+        @apply mb-6 font-normal text-2xl !leading-snug;
     }
 
     p, ul, ol {
@@ -60,9 +109,22 @@ html {
 .has-easy-notification-bar .easy-notification-bar-button a { @apply bg-transparent }
 .has-easy-notification-bar .easy-notification-bar-button a:hover { @apply bg-transparent underline }
 
-.btn { @apply px-4 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-black bg-white hover:bg-white sm:px-8 transition-colors duration-500 }
+.btn {
+   @apply whitespace-nowrap overflow-hidden px-10 py-5 w-fit border border-transparent text-sm rounded-lg shadow-sm !text-black bg-white hover:border-dark transition-colors duration-500 font-medium;
+   font-family: 'IBM Plex Mono', monospace;
 
-.btn-outline { @apply bg-transparent border border-gray-300 text-white hover:text-dark }
+   &.btn-invert {
+      @apply bg-black !text-white hover:border-white;
+   }
+
+   &.btn-invert-outline {
+      @apply bg-white !text-dark border-black hover:border-black/50;
+   }
+
+   &.btn-outline {
+      @apply bg-dark border-white !text-white hover:bg-white hover:!text-black hover:border-white/70;
+   }
+}
 
 #cookie-law-info-bar {
   background: rgba(255, 255, 255, 0.75) !important;
@@ -85,7 +147,15 @@ html {
 .wpcf7-label { @apply block text-sm font-medium text-left text-gray-300 }
 .wpcf7-submit { @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 }
 
-.wpcf7-response-output { }
+.wpcf7-response-output {
+  z-index: 9999;
+  @apply fixed m-0 bottom-5 -left-2 md:left-auto md:right-5 w-full text-center border-0 rounded md:px-6 md:w-1/2 animate-pulse
+}
+
+.invalid .wpcf7-response-output { @apply border-0 bg-yellow-500 border-yellow-500 }
+.sent .wpcf7-response-output { @apply border-0 bg-green-500 }
+
+.wpcf7-not-valid-tip { @apply text-xs }
 
 img.alignright { float: right; margin: 0 0 1em 1em; }
 img.alignleft { float: left; margin: 0 1em 1em 0; }
@@ -94,7 +164,10 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .alignleft { float: left; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
-.attachment svg,.widget_media_image svg{max-width:100%;height:auto}
+.attachment svg { max-width:100%; height:auto}
+
+#breadcrumbs a { @apply lg:px-3 inline-block; }
+#breadcrumbs span.breadcrumb_last { @apply lg:pl-3 opacity-60;  }
 
 /* change dot color
 .flickity-page-dots { bottom: -15px;}

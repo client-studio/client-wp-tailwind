@@ -8,11 +8,11 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
+<body <?php body_class( 'antialiased' ); ?>>
 
 <div id="page" class="min-h-screen flex flex-col">
 
-	<header class="bg-black sticky top-0 z-50">
+	<header class="bg-black sticky top-0 z-50 main-header">
 
 	<nav class="main-menu site-container">
 	  <div class="py-4">

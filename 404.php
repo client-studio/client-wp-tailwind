@@ -12,9 +12,9 @@
 		<div class="w-full md:w-1/2 md:mx-auto flex items-center justify-center">
 			<article class="m-8 text-center">
 				<div class="text-white text-5xl md:text-8xl mb-3">404</div>
-				<p class="text-gray-100 text-2xl mb-8"><?php _e( 'Sorry, you are in the wrong place.', 'client' ); ?></p>
+				<p class="text-gray-100 text-2xl mb-8"><?php _e( 'Sorry, this page or content is missing.', 'client' ); ?></p>
 				<a href="<?php echo get_bloginfo( 'url' ); ?>" class="btn">
-					<?php _e( 'Frontpage', 'client' ); ?>
+					<?php _e( 'Return home', 'client' ); ?>
 				</a>
 			</article>
 		</div>

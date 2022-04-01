@@ -5,7 +5,6 @@ const tailpress = require('./tailpress.json');
 module.exports = {
     mode: 'jit',
     tailpress,
-    purge: {
         content: [
             './template-parts/*.php',
             './resources/css/*.css',
@@ -23,7 +22,6 @@ module.exports = {
             './404.php',
             './safelist.txt'
         ],
-    },
     theme: {
         container: {
             padding: {

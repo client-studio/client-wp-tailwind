@@ -7,7 +7,7 @@ get_header(); ?>
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 
-    <div class="site-container py-20">
+    <div class="site-container py-24">
 
           <article>
             <?php the_content(); ?>

@@ -8,7 +8,6 @@
 
     <ul class="carousel relative overflow-hidden outline-none" data-flickity='{ "groupCells": false, "autoPlay": 2000, "wrapAround": true, "pageDots": false, "prevNextButtons": false, "draggable": true }'>
 
-
       <?php $the_query = new WP_Query( 'post_type=post&post_status=publish&posts_per_page=9' );
       if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -21,10 +20,10 @@
             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-dark opacity-90 mix-blend-multiply" aria-hidden="true"></div>
             </div>
 
-            <div class="relative px-4 lg:px-5 pb-10">
-              <h1 class="font-medium tracking-tight text-white text-2xl mb-2"><?php the_title();?></h1>
-              <span class="mt-2 text-sm text-gray-300"><?php the_content(); ?></span>
-            </div>
+            <article class="relative">
+              <h1><?php the_title();?></h1>
+              <?php the_content(); ?>
+            </article>
           </a>
 
       </li>

@@ -58,8 +58,6 @@ function tailpress_get_data( $key = null ) {
  * Theme setup.
  */
 function tailpress_setup() {
-	// Let WordPress manage the document title.
-	add_theme_support( 'title-tag' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -68,29 +66,7 @@ function tailpress_setup() {
 		)
 	);
 
-	// Switch default core markup for search form, comment form, and comments
-	// to output valid HTML5.
-	add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		)
-	);
-
-	// Adding Thumbnail basic support.
-	add_theme_support( 'post-thumbnails' );
-
-	// Block editor.
-	add_theme_support( 'align-wide' );
-
-	add_theme_support( 'wp-block-styles' );
-
-	add_theme_support( 'editor-styles' );
-	add_editor_style();
+	// add_theme_support moved to admin snippets / PHP8 errors
 
 	$tailpress = tailpress_get_data();
 
@@ -118,8 +94,8 @@ function tailpress_setup() {
 		$tailpress['fontSizes']
 	);
 
-	add_theme_support( 'editor-color-palette', $colors );
-	add_theme_support( 'editor-font-sizes', $font_sizes );
+	//add_theme_support( 'editor-color-palette', $colors );
+	//add_theme_support( 'editor-font-sizes', $font_sizes );
 }
 
 add_action( 'after_setup_theme', 'tailpress_setup' );
