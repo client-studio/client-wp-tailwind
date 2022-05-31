@@ -1,4 +1,4 @@
-# Tailwind Starter template for Wordpress themes
+# Tailwind Starter template for Wordpress (Archived)
 
 Made by http://client.studio/
 
